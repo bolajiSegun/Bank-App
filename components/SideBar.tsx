@@ -11,10 +11,7 @@ const SideBar = ({ user }: SiderbarProps) => {
   return (
     <section className="sidebar">
       <nav className="flex flex-col gap-4">
-        <Link
-          href="/"
-          className="flex items-center mb-12 cursor-pointer items-center gap-2"
-        >
+        <Link href="/" className="flex items-center mb-12 cursor-pointer gap-2">
           <Image
             src="/icons/logo.svg"
             alt="SG Bank"

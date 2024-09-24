@@ -31,7 +31,7 @@ function Home() {
       <RightSidebar
         user={loggedIn}
         transactions={[]}
-        banks={[{ currentBalance: 152.23 }, { currentBalance: 342.82 }]}
+        // banks={[{ currentBalance: 152.23 }, { currentBalance: 342.82 }]}
       />
     </section>
   );

@@ -6,17 +6,21 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
+import { Control, FieldPath } from "react-hook-form";
 import { any, z } from "zod";
-import { formSchema } from "@/lib/utils";
+import { authFormSchema } from "@/lib/utils";
+
+
+const formSchema = authFormSchema("sign-up")
 
 interface CustomInput {
   control: Control<z.infer<typeof formSchema>>;
-  name: any;
+  name: FieldPath<z.infer<typeof formSchema>>;
   placeholder: string;
   type: string;
   label: string;
 }
+
 
 const CustomInput = ({
   control,
@@ -43,7 +47,7 @@ const CustomInput = ({
                   {...field}
                 />
               </FormControl>
-              <FormMessage className="form-message mt-2" />
+              <FormMessage className="form-message mt-2 text-red-600" />
             </div>
           </div>
         )}
